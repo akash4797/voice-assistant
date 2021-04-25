@@ -24,18 +24,6 @@ const contentA = document.querySelector('.contentA');
 const theWholeBox = document.querySelector(".whole-message-box");
 const reco = document.querySelector(".rec");
 
-
-const greetings = ['Very well as always!, stop asking these shitty commmon question',
-'So much disappointed that you have started conversation with these common question'];
-
-const songs = ['Shaaa Reee Gaaa Maaa Paaa,that was easy!',"Laaaala Lalalaaaaaaa... That's all I know"];
-
-const starting = ["Hello","Hi","Hi,there!","Howdy!"]; 
-
-const loling = ["lol, haha","Go to hell","XD"];
-
-const helping = ["Hmmm... I'm not your servant!","Sorry, I cannot help you... I'm not your servant"];
-
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
 const recognition = new SpeechRecognition();
@@ -279,6 +267,17 @@ window.onclick = function(event) {
 }
 
 //code before 
+
+// const greetings = ['Very well as always!, stop asking these shitty commmon question',
+// 'So much disappointed that you have started conversation with these common question'];
+
+// const songs = ['Shaaa Reee Gaaa Maaa Paaa,that was easy!',"Laaaala Lalalaaaaaaa... That's all I know"];
+
+// const starting = ["Hello","Hi","Hi,there!","Howdy!"]; 
+
+// const loling = ["lol, haha","Go to hell","XD"];
+
+// const helping = ["Hmmm... I'm not your servant!","Sorry, I cannot help you... I'm not your servant"];
 
 // if(message.toLowerCase().includes('how are you')){
         
