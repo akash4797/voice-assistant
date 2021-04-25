@@ -1,4 +1,5 @@
-var data = [];
+let data = [];
+let phase = 0;
 
 document.addEventListener("DOMContentLoaded", (event) => {
     var reqData = JSON.parse(localStorage.getItem("data"));

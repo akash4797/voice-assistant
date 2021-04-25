@@ -58,7 +58,7 @@ const commands = [
         ],
         voiceO:[
             'Shaaa Reee Gaaa Maaa Paaa,that was easy!',
-            "Laaaala Lalalaaaaaaa... That's all I know"
+            "You feel up my senses like a night in a forest... That's all I know"
         ],
         emoji:"😌",
         interaction:false 
