@@ -58,7 +58,8 @@ const commands = [
         ],
         voiceO:[
             'Shaaa Reee Gaaa Maaa Paaa,that was easy!',
-            "You feel up my senses like a night in a forest... That's all I know"
+            "You feel up my senses like a night in a forest... That's all I know",
+            "kiuki tum hi ho....ab tum hi ho"
         ],
         emoji:"😌",
         interaction:false 
