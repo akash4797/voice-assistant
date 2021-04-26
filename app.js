@@ -94,7 +94,7 @@ function readOutLoud(message,ph,comm){
                         finalText = commands[i].voiceO[Math.floor(Math.random() * commands[i].voiceO.length)];
                         writtenText = finalText+" "+commands[i].emoji;
                         speech.text = finalText;
-                        if(commands[i]?.phase.length > 0){
+                        if(commands[i+1]?.phase.length != 0){
                             phase = phase+1;
                             commandlist = i;
                         }
