@@ -1,6 +1,6 @@
 let data = [];
 let phase = 0;
-let commandlist;
+let commandlist=null;
 
 document.addEventListener("DOMContentLoaded", (event) => {
     var reqData = JSON.parse(localStorage.getItem("data"));
@@ -63,11 +63,9 @@ recognition.onresult = function(event){
 
 
     //content.textContent ='Your Voice: '+ transcript;
-    if(phase !=0) {
+ 
         readOutLoud(transcript,phase,commandlist);
-    }else{
-        readOutLoud(transcript,phase);    
-    }
+
     
 }
 
