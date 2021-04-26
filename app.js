@@ -85,6 +85,8 @@ function readOutLoud(message,ph,comm){
         finalText = commands[comm].phases[ph-1].voiceO[Math.floor(Math.random() * commands[comm].phases[ph-1].voiceO.length)];
         writtenText = finalText+" "+commands[comm].phases[ph-1].emoji;
         speech.text = finalText;
+        phase = 0;
+        commandlist = null;
         }
     }else{
         commands.map((command,i)=>{    
