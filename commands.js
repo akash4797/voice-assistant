@@ -100,7 +100,7 @@ const commands = [
             'do you know me'
         ],
         voiceO:[
-            'Sorry, I do not know you and do not want to know that also....but still tell me your name?'
+            'Sorry, I do not know you and do not want to know that also. But still tell me your name?'
         ],
         phase:true,
         phases:[
