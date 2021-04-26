@@ -81,9 +81,9 @@ function readOutLoud(message,ph,comm){
     speech.text = defaultCommand.default;    
 
     if(ph!=0){   
-        if(commands[comm].phase[ph-1]?.voiceI.length == 0){                     
-        finalText = commands[comm].phase[ph-1].voiceO[Math.floor(Math.random() * commands[comm].phase[ph-1].voiceO.length)];
-        writtenText = finalText+" "+commands[comm].phase[ph-1].emoji;
+        if(commands[comm].phases[ph-1]?.voiceI.length == 0){                     
+        finalText = commands[comm].phases[ph-1].voiceO[Math.floor(Math.random() * commands[comm].phases[ph-1].voiceO.length)];
+        writtenText = finalText+" "+commands[comm].phases[ph-1].emoji;
         speech.text = finalText;
         }
     }else{
@@ -94,7 +94,7 @@ function readOutLoud(message,ph,comm){
                         finalText = commands[i].voiceO[Math.floor(Math.random() * commands[i].voiceO.length)];
                         writtenText = finalText+" "+commands[i].emoji;
                         speech.text = finalText;
-                        if(commands[i].phase.length != 0){
+                        if(commands[i].phase){
                             phase = phase+1;
                             commandlist = i;
                         }

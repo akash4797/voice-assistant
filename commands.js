@@ -12,6 +12,7 @@ const commands = [
             'Very well as always!, stop asking these shitty commmon question',
             'So much disappointed that you have started conversation with these common question'
         ],
+        phase:true,
         emoji:"😏",
         interaction:false
     },
@@ -24,6 +25,7 @@ const commands = [
             "Hmmm... ask me anything, your command will be ignored successfully",
             "Do yourself...didn't you do anything without me before?"
         ],
+        phase:true,
         emoji:"😏",
         interaction:false 
     },
@@ -37,6 +39,7 @@ const commands = [
         voiceO:[
             "Hello","Hi","Hi,there!","Howdy!"
         ],
+        phase:true,
         emoji:"🖐😀",
         interaction:false 
     },
@@ -48,6 +51,7 @@ const commands = [
         voiceO:[
             "lol, haha","Go to hell","XD"
         ],
+        phase:true,
         emoji:"😂🤣",
         interaction:false 
     },
@@ -61,6 +65,7 @@ const commands = [
             "You feel up my senses like a night in a forest... That's all I know",
             "You are my fire, no one desire...lol"
         ],
+        phase:true,
         emoji:"😌",
         interaction:false 
     },     
@@ -71,6 +76,7 @@ const commands = [
         voiceO:[
             'I am nobody, but a talking machine! , I do not know why I was created?'
         ],
+        phase:true,
         emoji:"🤔",
         interaction:false 
     },
@@ -82,6 +88,7 @@ const commands = [
         voiceO:[
             'My creator is Shariar Akash, He had created this by a simple piece of shit, sorry....simple piece of code'
         ],
+        phase:true,
         emoji:"😒",
         interaction:false 
     },
@@ -95,7 +102,8 @@ const commands = [
         voiceO:[
             'Sorry, I do not know you and do not want to know that also...but still tell me your name?'
         ],
-        phase:[
+        phase:true,
+        phases:[
             {
                 voiceI:[],
                 voiceO:[
@@ -117,6 +125,7 @@ const commands = [
         ],
         voiceO:[        
         ],
+        phase:true,
         emoji:"🙄",
         interaction: true,
         do:function(){
