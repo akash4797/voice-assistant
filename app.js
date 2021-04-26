@@ -81,9 +81,9 @@ function readOutLoud(message,ph,comm){
     speech.text = defaultCommand.default;    
 
     if(ph!=0){   
-        if(commands[comm].phases[ph]?.voiceI.length == 0){                     
-        finalText = commands[comm].phases[ph].voiceO[Math.floor(Math.random() * commands[comm].phases[ph-1].voiceO.length)];
-        writtenText = finalText+" "+commands[comm].phases[ph].emoji;
+        if(commands[comm].phases[ph-1]?.voiceI.length == 0){                     
+        finalText = commands[comm].phases[ph-1].voiceO[Math.floor(Math.random() * commands[comm].phases[ph-1].voiceO.length)];
+        writtenText = finalText+" "+commands[comm].phases[ph-1].emoji;
         speech.text = finalText;
         }
     }else{
