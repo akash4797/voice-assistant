@@ -18,8 +18,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 
 
-
-
 const btn = document.querySelector('.talk');
 const content = document.querySelector('.content');
 const contentA = document.querySelector('.contentA');
@@ -96,10 +94,10 @@ function readOutLoud(message,ph,comm){
                         finalText = commands[i].voiceO[Math.floor(Math.random() * commands[i].voiceO.length)];
                         writtenText = finalText+" "+commands[i].emoji;
                         speech.text = finalText;
-                        // if(commands[i]?.phase.length != 0){
-                        //     phase = phase+1;
-                        //     commandlist = i;
-                        // }
+                        if(commands[i]?.phase.length > 0){
+                            phase = phase+1;
+                            commandlist = i;
+                        }
                     }else{                    
                         finalText = commands[i].do();
                         writtenText = finalText+" "+commands[i].emoji;
