@@ -1,5 +1,6 @@
 let data = [];
 let phase = 0;
+let commandlist;
 
 document.addEventListener("DOMContentLoaded", (event) => {
     var reqData = JSON.parse(localStorage.getItem("data"));
@@ -62,8 +63,12 @@ recognition.onresult = function(event){
 
 
     //content.textContent ='Your Voice: '+ transcript;
-
-    readOutLoud(transcript);    
+    if(phase !=0) {
+        readOutLoud(transcript,phase,commandlist);
+    }else{
+        readOutLoud(transcript,phase);    
+    }
+    
 }
 
 
@@ -72,28 +77,42 @@ btn.addEventListener('click', () =>{
 });
 
 
-function readOutLoud(message){
+function readOutLoud(message,ph,comm){
 
     const speech = new SpeechSynthesisUtterance();
     var writtenText = defaultCommand.default+" "+defaultCommand.emoji;
     var finalText="";
-    speech.text = defaultCommand.default;
+    speech.text = defaultCommand.default;    
 
-    commands.map((command,i)=>{    
-        command.voiceI.map((voice)=>{
-            if(message.toLowerCase().includes(voice)){
-                if(commands[i].interaction == false){                    
-                    finalText = commands[i].voiceO[Math.floor(Math.random() * commands[i].voiceO.length)];
-                    writtenText = finalText+" "+commands[i].emoji;
-                    speech.text = finalText;
-                }else{                    
-                    finalText = commands[i].do();
-                    writtenText = finalText+" "+commands[i].emoji;
-                    speech.text = finalText;
-                }                            
-            }
+    if(ph!=0){   
+        if(commands[comm].phase[ph-1]?.voiceI.length == 0){                     
+        finalText = commands[comm].phase[ph-1].voiceO[Math.floor(Math.random() * commands[comm].phase[ph-1].voiceO.length)];
+        writtenText = finalText+" "+commands[comm].phase[ph-1].emoji;
+        speech.text = finalText;
+        }
+    }else{
+        commands.map((command,i)=>{    
+            command.voiceI.map((voice)=>{
+                if(message.toLowerCase().includes(voice)){
+                    if(commands[i].interaction == false){                                        
+                        finalText = commands[i].voiceO[Math.floor(Math.random() * commands[i].voiceO.length)];
+                        writtenText = finalText+" "+commands[i].emoji;
+                        speech.text = finalText;
+                        if(commands[i]?.phase.length != 0){
+                            phase = phase+1;
+                            commandlist = i;
+                        }
+                    }else{                    
+                        finalText = commands[i].do();
+                        writtenText = finalText+" "+commands[i].emoji;
+                        speech.text = finalText;
+                    }                            
+                }
+            });
         });
-    });
+    }
+
+
 
     speech.volume = 1;
     speech.rate = 1;
@@ -104,6 +123,8 @@ function readOutLoud(message){
 
     //contentA.textContent ='Bot: '+ writtenText;
     window.speechSynthesis.speak(speech);
+
+    if(phase != 0) recognition.start();
     
 
 }

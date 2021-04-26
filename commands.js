@@ -93,7 +93,17 @@ const commands = [
             'do you know me'
         ],
         voiceO:[
-            'Sorry, I do not know you and do not want to know that also'
+            'Sorry, I do not know you and do not want to know that also...but still tell me your name?'
+        ],
+        phase:[
+            {
+                voiceI:[],
+                voiceO:[
+                    "Oh! thats your name?....okay , you will be forgotten too."
+                ],
+                emoji:"😌",
+                interaction:false 
+            }
         ],
         emoji:"😕",
         interaction:false 
