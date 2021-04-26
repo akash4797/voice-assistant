@@ -123,10 +123,6 @@ function readOutLoud(message,ph,comm){
 
     //contentA.textContent ='Bot: '+ writtenText;
     window.speechSynthesis.speak(speech);
-
-    if(phase != 0) {
-        recognition.start();
-    }
     
 
 }
