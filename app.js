@@ -34,6 +34,8 @@ recognition.onspeechstart = function(){
 
 recognition.onaudioend = function(){
     reco.style.display="none";
+    console.log('Voice is Deactivated!');
+    allStop();
 }
 
 recognition.onaudiostart = function(){
@@ -89,6 +91,7 @@ function readOutLoud(message,ph,comm){
         commandlist = null;
         }
     }else{
+        console.log(phase)
         commands.map((command,i)=>{    
             command.voiceI.map((voice)=>{
                 if(message.toLowerCase().includes(voice)){
@@ -114,7 +117,7 @@ function readOutLoud(message,ph,comm){
 
     speech.volume = 1;
     speech.rate = 1;
-    speech.pitch = 0.7;
+    speech.pitch = 3;
 
     makeStore("bot",writtenText,false);
 

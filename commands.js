@@ -1,6 +1,7 @@
 const defaultCommand={
     default:"Sorry could not understand...Because my creator did not taught me much, such a lazy person",
-    emoji:"😅"
+    emoji:"😅",
+    interaction:false
 }
 
 const commands = [
@@ -14,6 +15,17 @@ const commands = [
         ],
         phase:false,
         emoji:"😏",
+        interaction:false
+    },
+    {
+        voiceI:[
+            "can we talk"
+        ],
+        voiceO:[
+            'We are already talking',
+        ],
+        phase:false,
+        emoji:"",
         interaction:false
     },
     {
@@ -71,10 +83,12 @@ const commands = [
     },     
     {
         voiceI:[
-            "who are you"
+            "who are you",
+            "what is your name"
         ],
         voiceO:[
-            'I am nobody, but a talking machine! , I do not know why I was created?'
+            'I am nobody, but a talking machine! , I do not know why I was created?',
+            'I dont have a name'
         ],
         phase:false,
         emoji:"🤔",
@@ -121,7 +135,8 @@ const commands = [
             "show me time",
             "hat's the time",
             'what time it is',
-            'what is the time'
+            'what is the time',
+            'what time is it'
         ],
         voiceO:[        
         ],
@@ -131,6 +146,20 @@ const commands = [
         do:function(){
             let date = new Date();
             return "it's "+date.getHours()+ " " + date.getMinutes();
+        }
+    },
+    {
+        voiceI:[
+            "call 911",
+        ],
+        voiceO:[        
+        ],
+        phase:false,
+        emoji:"!",
+        interaction: true,
+        do:function(){
+            window.open('tel:911');
+            return "calling 911"
         }
     },
 ]
