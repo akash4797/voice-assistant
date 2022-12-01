@@ -117,7 +117,7 @@ function readOutLoud(message,ph,comm){
 
     speech.volume = 1;
     speech.rate = 1;
-    speech.pitch = 3;
+    speech.pitch = 0.7;
 
     makeStore("bot",writtenText,false);
 
