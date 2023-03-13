@@ -26,6 +26,7 @@ const contentA = document.querySelector('.contentA');
 const theWholeBox = document.querySelector(".whole-message-box");
 const reco = document.querySelector(".rec");
 const stopTalk = document.querySelector(".stop-talk");
+const form = document.querySelector(".form")
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
@@ -73,6 +74,14 @@ recognition.onresult = function(event){
 
     
 }
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if(e.target.main.value.trim() !== "" ){
+        readOutLoud(e.target.main.value,phase,commandlist);
+    }
+});
 
 
 btn.addEventListener('click', () =>{
