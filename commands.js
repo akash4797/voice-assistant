@@ -118,7 +118,6 @@ const commands = [
             "Someone is sending me offensive messages via a social networking site. Who do I contact regarding this"  
         ],
         voiceO:[
-            'Provide the name and details of your abuser',
             'File online GD here, abcd.xyz'
         ],
         phase:false,

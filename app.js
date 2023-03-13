@@ -2,6 +2,7 @@
 let data = [];
 let phase = 0;
 let commandlist=null;
+let isReadOutLoud = true;
 
 //local storage get previous
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 });
 
-
+//import all components
 const btn = document.querySelector('.talk');
 const content = document.querySelector('.content');
 const contentA = document.querySelector('.contentA');
@@ -27,6 +28,7 @@ const theWholeBox = document.querySelector(".whole-message-box");
 const reco = document.querySelector(".rec");
 const stopTalk = document.querySelector(".stop-talk");
 const form = document.querySelector(".form")
+const toggleReadOutButton = document.getElementById("toggleReadOut") 
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
@@ -48,17 +50,17 @@ recognition.onaudiostart = function(){
 
 recognition.onspeechend = function(){
     reco.style.display="none";
-    stopTalk.style.display = "none"
     recognition.stop();
 
 };
 
-
+//stop speaking
 function allStop(){
     window.speechSynthesis.cancel();
     stopTalk.style.display = "none"
 }
 
+//after recognistion
 recognition.onresult = function(event){
     const current = event.resultIndex;
 
@@ -70,26 +72,39 @@ recognition.onresult = function(event){
 
 
     //content.textContent ='Your Voice: '+ transcript;
- 
-        readOutLoud(transcript,phase,commandlist);
+    readOutLoud(transcript,phase,commandlist);
 
     
 }
 
+
+//getting text from field
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     e.stopPropagation();
     if(e.target.main.value.trim() !== "" ){
+        makeStore("user",e.target.main.value,false);
         readOutLoud(e.target.main.value,phase,commandlist);
+        e.target.main.value = ""
     }
 });
 
+function toggleReadOutLoud(){
+    isReadOutLoud = !isReadOutLoud;
+    if(isReadOutLoud){
+        toggleReadOutButton.textContent = "Turn off read-out loud"
+    }else{
+        toggleReadOutButton.textContent = "Turn on read-out loud"
+    }
+}
 
+
+//talk button for recognition
 btn.addEventListener('click', () =>{
     recognition.start();
 });
 
-
+//main for readoutloud
 function readOutLoud(message,ph,comm){
 
     const speech = new SpeechSynthesisUtterance();
@@ -140,9 +155,11 @@ function readOutLoud(message,ph,comm){
     makeStore("bot",writtenText,false);
 
 
+    if(isReadOutLoud){
+        window.speechSynthesis.speak(speech);
+    }
     //contentA.textContent ='Bot: '+ writtenText;
-    window.speechSynthesis.speak(speech);
-    stopTalk.style.display = "block"
+    // stopTalk.style.display = "block"
     // console.log(writtenText)
     
 
