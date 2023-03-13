@@ -386,7 +386,7 @@ const commands2 = [
         interaction:true,
         do:function(){
             window.open('tel:01734007734');
-            return "Calling fire service department"
+            return "calling 01734007734"
         }
     },
 
@@ -396,14 +396,11 @@ const commands2 = [
             "I am a victim of physical assault. Please help me"
         ],
         voiceO:[
+            'File your complaint in the online GD form. Redirecting there.'
         ],
         phase:false,
         emoji:"",
-        interaction:true,
-        do:function(){
-            window.open("http://gd.police.gov.bd", '_blank');
-            return "File your complaint in the online GD form. Redirecting there."
-        }
+        interaction:false
     },
 
     {
@@ -456,14 +453,14 @@ const commands2 = [
             "My vehicle has been in an accident. Please call the nearest police station to attend this"
         ],
         voiceO:[
-            
+            'Calling XYZ Police station'
         ],
         phase:false,
         emoji:"",
         interaction:true,
         do:function(){
             window.open('tel:01734007734');
-            return "Calling XYZ Police station"
+            return "calling 01734007734"
         }
     },
 
