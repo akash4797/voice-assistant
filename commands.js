@@ -1,5 +1,5 @@
 const defaultCommand={
-    default:"Sorry could not understand...Because my creator did not taught me much, such a lazy person",
+    default:"Sorry could not understand...Can you repeat?",
     emoji:"😅",
     interaction:false
 }

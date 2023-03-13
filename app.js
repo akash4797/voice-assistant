@@ -25,6 +25,7 @@ const content = document.querySelector('.content');
 const contentA = document.querySelector('.contentA');
 const theWholeBox = document.querySelector(".whole-message-box");
 const reco = document.querySelector(".rec");
+const stopTalk = document.querySelector(".stop-talk");
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
@@ -50,8 +51,10 @@ recognition.onspeechend = function(){
 
 };
 
+
 function allStop(){
     window.speechSynthesis.cancel();
+    stopTalk.style.display = "none"
 }
 
 recognition.onresult = function(event){
@@ -129,6 +132,7 @@ function readOutLoud(message,ph,comm){
 
     //contentA.textContent ='Bot: '+ writtenText;
     window.speechSynthesis.speak(speech);
+    stopTalk.style.display = "block"
     // console.log(writtenText)
     
 

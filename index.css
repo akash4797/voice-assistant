@@ -2,20 +2,50 @@ body{
     background-color: #f2f2f2;
 }
 
+.input{
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    border: none;
+}
+
 .btng{
     position: fixed;
     bottom: 5px; 
     width: 100%;
     height: 60px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center; 
-    z-index: 2;    
+    z-index: 2;   
+    gap: 10px; 
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.talk,.stop-talk{
-    width: 48%;
-    margin-right: 3px;
+.button-rounded{
+    border: none;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stop-talk{
+    /* width: 48%; */
+    /* margin-right: 3px; */
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+    display: none;
 }
 
 .talk:focus,.stop-talk:focus{
