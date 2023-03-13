@@ -325,4 +325,158 @@ const commands1 = [
 ]
 
 //Muktadir
-const commands2 = [] 
+const commands2 = [
+    {
+        voiceI:[
+            "I am being followed. Call the appropriate police department to locate me and ensure my safety",
+            "I am being followed. Call the appropriate police department to locate me and ensure my safety."
+        ],
+        voiceO:[
+
+        ],
+        phase:false,
+        emoji:"",
+        interaction: true,
+        do:function(){
+            window.open('tel:01727423032');
+            return "The nearest police station is being contacted"
+        }
+    },
+
+    {
+        voiceI:[
+            "Where is the nearest police station?",
+            "Where is the nearest police station"
+        ],
+        voiceO:[
+            'The nearest police station is the Motijheel Police Station',
+            'Motijheel Police Station'
+        ],
+        phase:false,
+        emoji:"",
+        interaction:false
+    },
+
+    {
+        voiceI:[
+            "I want to file an online GD",
+            "I want to file an online GD."
+        ],
+        voiceO:[
+            
+        ],
+        phase:false,
+        emoji:"",
+        interaction:true,
+        do:function(){
+            window.open("http://gd.police.gov.bd", '_blank');
+            return "Very well. Redirecting to the online GD form"
+        }
+    },
+
+    {
+        voiceI:[
+            "Call the fire service department",
+            "Call the fire service department."
+        ],
+        voiceO:[
+        ],
+        phase:false,
+        emoji:"",
+        interaction:true,
+        do:function(){
+            window.open('tel:01734007734');
+            return "Calling fire service department"
+        }
+    },
+
+    {
+        voiceI:[
+            "I am a victim of physical assault. Please help me.",
+            "I am a victim of physical assault. Please help me"
+        ],
+        voiceO:[
+        ],
+        phase:false,
+        emoji:"",
+        interaction:true,
+        do:function(){
+            window.open("http://gd.police.gov.bd", '_blank');
+            return "File your complaint in the online GD form. Redirecting there."
+        }
+    },
+
+    {
+        voiceI:[
+            "Who should I contact to give crucial information for a police case?",
+            "Who should I contact to give crucial information for a police case"
+        ],
+        voiceO:[
+            'Contact XYZ department at xxx-xxx-xxx, call: XXX'
+        ],
+        phase:false,
+        emoji:"",
+        interaction:false
+    },
+
+    {
+        voiceI:[
+            "My car has been towed by police. Where can I find it?",
+            "My car has been towed by police. Where can I find it"
+        ],
+        voiceO:[
+            'Contact your nearest police station'
+        ],
+        phase:false,
+        emoji:"",
+        interaction:false
+    },
+
+    {
+        voiceI:[
+            "Someone is sending me abusive messages via a social networking site. Who do I contact regarding this?",
+            "Someone is sending me threatening messages via a social networking site. Who do I contact regarding this?",
+            "Someone is sending me offensive messages via a social networking site. Who do I contact regarding this?",
+            "Someone is sending me abusive messages via a social networking site. Who do I contact regarding this",
+            "Someone is sending me threatening messages via a social networking site. Who do I contact regarding this",
+            "Someone is sending me offensive messages via a social networking site. Who do I contact regarding this"  
+        ],
+        voiceO:[
+            'Provide the name and details of your abuser',
+            'File online GD here, abcd.xyz'
+        ],
+        phase:false,
+        emoji:"",
+        interaction:false
+    },
+    
+    {
+        voiceI:[
+            "My vehicle has been in an accident. Please call the nearest police station to attend this.",
+            "My vehicle has been in an accident. Please call the nearest police station to attend this"
+        ],
+        voiceO:[
+            
+        ],
+        phase:false,
+        emoji:"",
+        interaction:true,
+        do:function(){
+            window.open('tel:01734007734');
+            return "Calling XYZ Police station"
+        }
+    },
+
+    {
+        voiceI:[
+            "I am under-age and am being married. What should I do?",
+            "I am under-age and am being married. What should I do"
+        ],
+        voiceO:[
+            'You are being connected to the nearest police station'
+        ],
+        phase:false,
+        emoji:"",
+        interaction:false
+    },
+] 
