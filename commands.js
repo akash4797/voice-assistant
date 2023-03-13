@@ -326,3 +326,152 @@ const commands1 = [
 
 //Muktadir
 const commands2 = [] 
+
+//akash
+const commands3 = [
+    {
+        voiceI:[
+            "I am a victim of robbery. Please call the nearest police officer.",
+            "Robbery victim. Need police ASAP."
+        ],
+        voiceO:[
+            'Calling police officer nearby.',
+            'Please wait while we call the nearest police officer'
+        ],
+        phase:false,
+        emoji:"",
+        interaction:false
+    },
+    {
+        voiceI:[
+            "I have witnessed a crime and would like to speak to a police officer",
+            "I need to report a crime to a police officer"
+        ],
+        voiceO:[
+            'Connecting you to your area’s police station',
+            'Connecting to local police station'
+        ],
+        phase:false,
+        emoji:"",
+        interaction:false
+    },
+    {
+        voiceI:[
+            "My husband is physically abusive towards me. What should I do?",
+            "Husband abuses me. What to do?"
+        ],
+        voiceO:[
+        ],
+        phase:false,
+        emoji:"",
+        interaction: true,
+        do:function(){
+            window.open("http://gd.police.gov.bd", '_blank');
+            return "Redirecting to online GD page"
+        }
+    },
+    {
+        voiceI:[
+            "I am a victim of workplace harassment. What is the appropriate course of action?",
+            "I'm being harassed at work. What should I do?"
+        ],
+        voiceO:[
+        ],
+        phase:false,
+        emoji:"",
+        interaction: true,
+        do:function(){
+            window.open("http://gd.police.gov.bd", '_blank');
+            return "File an online GD or talk to a police officer. We are here to help"
+        }
+    },
+    {
+        voiceI:[
+            "My neighbors are being very loud. Please check if everything is alright",
+            "Neighbors are loud, check if okay.",
+        ],
+        voiceO:[
+            'Please send their address. The authorities will look into it'
+        ],
+        phase:true,
+        phases:[
+            {
+                voiceI:[],
+                voiceO:[
+                    "Thank you for your information. The authorities will look into it"
+                ],
+                emoji:"",
+                interaction:false 
+            }
+        ],
+        emoji:"",
+        interaction:false 
+    },
+    {
+        voiceI:[
+            "I am being blackmailed for extortion. Which department do I contact?",
+            "Who to contact for extortion blackmail?"
+        ],
+        voiceO:[
+            'Contact the XYZ department at xxx-xxx-xxx',
+            'Contact XYZ at xxx-xxx-xxx'
+        ],
+        phase:false,
+        emoji:"",
+        interaction:false
+    },
+    {
+        voiceI:[
+            "I am a foreigner visiting Bangladesh. I need a security detail. Who do I contact?",
+            "Need security detail as foreigner in Bangladesh. Who to contact?"
+        ],
+        voiceO:[
+            'Email the XYZ department at xyz@gmail.com',
+        ],
+        phase:false,
+        emoji:"",
+        interaction:false
+    },
+    {
+        voiceI:[
+            "My tourist visa in Bangladesh has expired. How do I extend it?",
+            "How to extend an expired tourist visa in Bangladesh?"
+        ],
+        voiceO:[        
+        ],
+        phase:false,
+        emoji:"!",
+        interaction: true,
+        do:function(){
+            window.open('tel:00000000');
+            return "Calling the immigration department"
+        }
+    },
+    {
+        voiceI:[
+            "I have been stabbed. Send the authorities to my location please",
+            "I have been shot. Send the authorities to my location please",
+            "Stabbed. Need help. Send authorities",
+            "Shot. Need help. Send authorities"
+        ],
+        voiceO:[
+            'Your location has been sent. You will be contacted shortly by the authorities',
+            'Location sent. Authorities will contact you soon',
+        ],
+        phase:false,
+        emoji:"",
+        interaction:false
+    },
+    {
+        voiceI:[
+            "I want to surrender myself for a crime I have committed",
+            "I confess to a crime and wish to surrender myself",
+        ],
+        voiceO:[
+            'Call xxx-xxx-xxx and state your name and address',
+        ],
+        phase:false,
+        emoji:"",
+        interaction:false
+    },
+]
