@@ -128,7 +128,8 @@ function readOutLoud(message,ph,comm){
 
 
     //contentA.textContent ='Bot: '+ writtenText;
-    window.speechSynthesis.speak(speech);
+    // window.speechSynthesis.speak(speech);
+    console.log(writtenText)
     
 
 }
