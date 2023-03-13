@@ -48,6 +48,7 @@ recognition.onaudiostart = function(){
 
 recognition.onspeechend = function(){
     reco.style.display="none";
+    stopTalk.style.display = "none"
     recognition.stop();
 
 };
