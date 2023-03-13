@@ -9,6 +9,7 @@ const commands = [
     {
         voiceI:[
             "I am being followed. Call the appropriate police department to locate me and ensure my safety",
+            "I am being followed Call the appropriate police department to locate me and ensure my safety",
             "I am being followed. Call the appropriate police department to locate me and ensure my safety."
         ],
         voiceO:[
@@ -72,6 +73,7 @@ const commands = [
     {
         voiceI:[
             "I am a victim of physical assault. Please help me.",
+            "I am a victim of physical assault Please help me.",
             "I am a victim of physical assault. Please help me"
         ],
         voiceO:[
@@ -98,6 +100,7 @@ const commands = [
     {
         voiceI:[
             "My car has been towed by police. Where can I find it?",
+            "My car has been towed by police Where can I find it?",
             "My car has been towed by police. Where can I find it"
         ],
         voiceO:[
@@ -111,9 +114,12 @@ const commands = [
     {
         voiceI:[
             "Someone is sending me abusive messages via a social networking site. Who do I contact regarding this?",
+            "Someone is sending me abusive messages via a social networking site Who do I contact regarding this?",
             "Someone is sending me threatening messages via a social networking site. Who do I contact regarding this?",
+            "Someone is sending me threatening messages via a social networking site Who do I contact regarding this?",
             "Someone is sending me offensive messages via a social networking site. Who do I contact regarding this?",
             "Someone is sending me abusive messages via a social networking site. Who do I contact regarding this",
+            "Someone is sending me abusive messages via a social networking site Who do I contact regarding this",
             "Someone is sending me threatening messages via a social networking site. Who do I contact regarding this",
             "Someone is sending me offensive messages via a social networking site. Who do I contact regarding this"  
         ],
@@ -128,6 +134,7 @@ const commands = [
     {
         voiceI:[
             "My vehicle has been in an accident. Please call the nearest police station to attend this.",
+            "My vehicle has been in an accident Please call the nearest police station to attend this.",
             "My vehicle has been in an accident. Please call the nearest police station to attend this"
         ],
         voiceO:[
@@ -145,6 +152,7 @@ const commands = [
     {
         voiceI:[
             "I am under-age and am being married. What should I do?",
+            "I am under-age and am being married What should I do",
             "I am under-age and am being married. What should I do"
         ],
         voiceO:[
@@ -157,10 +165,12 @@ const commands = [
     {
         voiceI:[
             "I am a victim of robbery. Please call the nearest police officer.",
+            "I am a victim of robbery Please call the nearest police officer.",
             "Robbery victim. Need police ASAP."
         ],
         voiceO:[
             'Calling police officer nearby.',
+            'Calling police officer nearby',
             'Please wait while we call the nearest police officer'
         ],
         phase:false,
@@ -183,7 +193,11 @@ const commands = [
     {
         voiceI:[
             "My husband is physically abusive towards me. What should I do?",
-            "Husband abuses me. What to do?"
+            "My husband is physically abusive towards me. What should I do",
+            "My husband is physically abusive towards me What should I do",
+            "Husband abuses me. What to do?",
+            "Husband abuses me. What to do",
+            "Husband abuses me What to do"
         ],
         voiceO:[
         ],
@@ -198,7 +212,10 @@ const commands = [
     {
         voiceI:[
             "I am a victim of workplace harassment. What is the appropriate course of action?",
-            "I'm being harassed at work. What should I do?"
+            "I am a victim of workplace harassment. What is the appropriate course of action",
+            "I am a victim of workplace harassment What is the appropriate course of action",
+            "I'm being harassed at work. What should I do?",
+            "I'm being harassed at work What should I do"
         ],
         voiceO:[
         ],
@@ -213,7 +230,9 @@ const commands = [
     {
         voiceI:[
             "My neighbors are being very loud. Please check if everything is alright",
-            "Neighbors are loud, check if okay.",
+            "My neighbors are being very loud Please check if everything is alright",
+            "Neighbors are loud, check if okay",
+            "Neighbors are loud check if okay",
         ],
         voiceO:[
             'Please send their address. The authorities will look into it'
@@ -235,7 +254,10 @@ const commands = [
     {
         voiceI:[
             "I am being blackmailed for extortion. Which department do I contact?",
-            "Who to contact for extortion blackmail?"
+            "I am being blackmailed for extortion. Which department do I contact",
+            "I am being blackmailed for extortion Which department do I contact",
+            "Who to contact for extortion blackmail?",
+            "Who to contact for extortion blackmail"
         ],
         voiceO:[
             'Contact the XYZ department at xxx-xxx-xxx',
@@ -248,7 +270,10 @@ const commands = [
     {
         voiceI:[
             "I am a foreigner visiting Bangladesh. I need a security detail. Who do I contact?",
-            "Need security detail as foreigner in Bangladesh. Who to contact?"
+            "I am a foreigner visiting Bangladesh. I need a security detail. Who do I contact",
+            "I am a foreigner visiting Bangladesh I need a security detail Who do I contact",
+            "Need security detail as foreigner in Bangladesh. Who to contact?",
+            "Need security detail as foreigner in Bangladesh Who to contact"
         ],
         voiceO:[
             'Email the XYZ department at xyz@gmail.com',
@@ -260,7 +285,9 @@ const commands = [
     {
         voiceI:[
             "My tourist visa in Bangladesh has expired. How do I extend it?",
-            "How to extend an expired tourist visa in Bangladesh?"
+            "My tourist visa in Bangladesh has expired How do I extend it",
+            "How to extend an expired tourist visa in Bangladesh?",
+            "How to extend an expired tourist visa in Bangladesh"
         ],
         voiceO:[        
         ],
@@ -275,9 +302,13 @@ const commands = [
     {
         voiceI:[
             "I have been stabbed. Send the authorities to my location please",
+            "I have been stabbed Send the authorities to my location please",
             "I have been shot. Send the authorities to my location please",
+            "I have been shot Send the authorities to my location please",
             "Stabbed. Need help. Send authorities",
-            "Shot. Need help. Send authorities"
+            "Stabbed Need help Send authorities",
+            "Shot. Need help. Send authorities",
+            "Shot Need help Send authorities"
         ],
         voiceO:[
             'Your location has been sent. You will be contacted shortly by the authorities',
@@ -298,6 +329,20 @@ const commands = [
         phase:false,
         emoji:"",
         interaction:false
+    },
+    {
+        voiceI:[
+            "hello",
+            "what's up",
+            "hi",
+            "whatsapp"
+        ],
+        voiceO:[
+            "Hello","Hi","Hi,there!","Howdy!"
+        ],
+        phase:false,
+        emoji:"🖐😀",
+        interaction:false 
     },
 ]
 
