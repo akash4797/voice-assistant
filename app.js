@@ -82,7 +82,9 @@ function readOutLoud(message,ph,comm){
     const speech = new SpeechSynthesisUtterance();
     var writtenText = defaultCommand.default+" "+defaultCommand.emoji;
     var finalText="";
-    speech.text = defaultCommand.default;    
+    speech.text = defaultCommand.default;   
+    
+    console.log("came init")
 
     if(ph!=0){   
         if(commands[comm].phases[ph-1]?.voiceI.length == 0){                     
@@ -93,7 +95,8 @@ function readOutLoud(message,ph,comm){
         commandlist = null;
         }
     }else{
-        console.log(phase)
+        console.log(phase);
+        console.log("started")
         commands.map((command,i)=>{    
             command.voiceI.map((voice)=>{
                 if(message.toLowerCase().includes(voice)){
