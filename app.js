@@ -99,7 +99,7 @@ function readOutLoud(message,ph,comm){
         console.log("started")
         commands.map((command,i)=>{    
             command.voiceI.map((voice)=>{
-                if(message.toLowerCase().includes(voice)){
+                if(message.toLowerCase().includes(voice.toLowerCase())){
                     if(commands[i].interaction == false){                                        
                         finalText = commands[i].voiceO[Math.floor(Math.random() * commands[i].voiceO.length)];
                         writtenText = finalText+" "+commands[i].emoji;
