@@ -1,7 +1,9 @@
+// @ts-nocheck
 let data = [];
 let phase = 0;
 let commandlist=null;
 
+//local storage get previous
 document.addEventListener("DOMContentLoaded", (event) => {
     var reqData = JSON.parse(localStorage.getItem("data"));
     
