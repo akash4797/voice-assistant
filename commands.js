@@ -338,7 +338,7 @@ const commands = [
             "whatsapp"
         ],
         voiceO:[
-            "Hello","Hi","Hi,there!","Howdy!"
+            "Hello","Hi","Howdy!"
         ],
         phase:false,
         emoji:"🖐😀",
