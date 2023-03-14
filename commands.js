@@ -330,20 +330,20 @@ const commands = [
         emoji:"",
         interaction:false
     },
-    {
-        voiceI:[
-            "hello",
-            "what's up",
-            "hi",
-            "whatsapp"
-        ],
-        voiceO:[
-            "Hello","Hi","Howdy!"
-        ],
-        phase:false,
-        emoji:"🖐😀",
-        interaction:false 
-    },
+    // {
+    //     voiceI:[
+    //         "hello",
+    //         "what's up",
+    //         "hi",
+    //         "whatsapp"
+    //     ],
+    //     voiceO:[
+    //         "Hello","Hi","Howdy!"
+    //     ],
+    //     phase:false,
+    //     emoji:"🖐😀",
+    //     interaction:false 
+    // },
 ]
 
 // const commands1 = [
