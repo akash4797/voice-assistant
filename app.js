@@ -150,7 +150,7 @@ function readOutLoud(message,ph,comm){
 
     speech.volume = 1;
     speech.rate = 1;
-    speech.pitch = 1;
+    speech.pitch = 1.5;
 
     makeStore("bot",writtenText,false);
 
